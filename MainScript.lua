@@ -80,7 +80,6 @@ function _G.GetLidlLibrary()
 			m.Parent=l
 			a.Parent = screengui
 		end)
-
 		return screengui
 	end
 
