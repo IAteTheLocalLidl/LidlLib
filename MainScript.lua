@@ -1,4 +1,4 @@
---do WHATEVER with this script, modify it, use it like a random person would, just have fun (but please try to keep in LidlLib somewhere visible if you do modify it)
+
 function GetLibrary()
 	local studio = game:GetService("RunService"):IsStudio()
 	if studio == false and syn then
