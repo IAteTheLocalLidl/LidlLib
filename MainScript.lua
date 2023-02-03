@@ -78,10 +78,14 @@ function _G.GetLidlLibrary()
 			m.Parent=l
 			a.Parent = screengui
 		end)
-		
+
 		return screengui
 	end
 
+	function functions:ChangeNameTitle(ui, name: string)
+		ui:FindFirstChild("TitleHolder"):FindFirstChild("TextLabel").Text = name
+	end
+	
 	function functions:AddToGui(ui)
 		local s,e = pcall(function()
 			syn.protect_gui(ui)
@@ -91,9 +95,5 @@ function _G.GetLidlLibrary()
 		return ui
 	end
 	
-	function functions:ChangeNameTitle(name: string)
-		
-	end
-
 	return functions
 end
