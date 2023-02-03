@@ -2,12 +2,14 @@ function _G.GetLidlLibrary()
 	print("LidlLib: Started")
 	local functions = {}
 	local title = nil
+	local ui = nil
 	function functions:CreateGui()
 		local list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 		local lettersinname = 8
 		local screengui = Instance.new("ScreenGui")
 		screengui.ResetOnSpawn = false
 		screengui.Name = ""
+		ui = screengui
 		for i = 1, lettersinname do
 			local chosen = math.random(1, string.len(list))
 			screengui.Name = screengui.Name.. string.sub(list, chosen, chosen)
@@ -83,18 +85,34 @@ function _G.GetLidlLibrary()
 		return screengui
 	end
 
-	function functions:ChangeNameTitle(ui, name: string)
-		title.Text = name
+	function functions:ChangeNameTitle(name)
+		if ui then
+			title.Text = name
+		end
 	end
 	
-	function functions:AddToGui(ui)
-		local s,e = pcall(function()
-			syn.protect_gui(ui)
-		end)
-		if e then warn("LidlLib: SYN PROTECT FAILURE, ".. e) end
-		ui.Parent = game:GetService("CoreGui")
-		return ui
+	function functions:NewButtonFolder()
+		if ui then
+			
+		end
 	end
 	
+	function functions:NewButton(folder)
+		if ui and folder then
+			
+		end
+	end
+
+	function functions:AddToGui()
+		if ui then
+			local s,e = pcall(function()
+				syn.protect_gui(ui)
+			end)
+			if e then warn("LidlLib: SYN PROTECT FAILURE, ".. e) end
+			ui.Parent = game:GetService("CoreGui")
+			return ui
+		end
+	end
+
 	return functions
 end
