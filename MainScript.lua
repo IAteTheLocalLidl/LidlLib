@@ -1,6 +1,7 @@
 function _G.GetLidlLibrary()
 	print("LidlLib: Started")
 	local functions = {}
+	local title = nil
 	function functions:CreateGui()
 		local list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 		local lettersinname = 8
@@ -46,6 +47,7 @@ function _G.GetLidlLibrary()
 			f.TextXAlignment=0
 			f.TextScaled=true
 			f.Parent=e
+			title = f
 			local g=Instance.new"UIGradient"
 			g.Rotation=140
 			g.Color=ColorSequence.new(Color3.fromRGB(47,47,47),Color3.fromRGB(38,38,38))
@@ -83,7 +85,7 @@ function _G.GetLidlLibrary()
 	end
 
 	function functions:ChangeNameTitle(ui, name: string)
-		ui:FindFirstChild("TitleHolder"):FindFirstChild("TextLabel").Text = name
+		title.Text = name
 	end
 	
 	function functions:AddToGui(ui)
