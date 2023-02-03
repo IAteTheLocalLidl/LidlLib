@@ -33,9 +33,3 @@ function GetLibrary()
 
 	return functions
 end
-
-local lib = GetLibrary() 
-
-local ui = lib:CreateGui()
-
-lib:AddToCoreGui(ui)
