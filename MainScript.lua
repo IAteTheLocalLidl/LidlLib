@@ -1,8 +1,6 @@
-
-function GetLibrary()
+function _G.GetLidlLibrary()
 	local studio = game:GetService("RunService"):IsStudio()
 	if studio == false and syn then
-
 	else
 		warn("You need Synapse X for this script!")
 		return
@@ -19,14 +17,14 @@ function GetLibrary()
 			screengui.Name = screengui.Name.. string.sub(list, chosen, chosen)
 		end
 		print(screengui)
-		
-		
-		
 		return screengui
 	end
 
 	function functions:AddToCoreGui(ui)
-		syn.protect_gui(ui)
+		local s,e = pcall(function()
+			syn.protect_gui(ui)
+		end)
+		if e then warn(e) end
 		ui.Parent = game:GetService("CoreGui")
 		return ui
 	end
