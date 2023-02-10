@@ -18,93 +18,95 @@ function _G.GetLidlLibrary()
 			local chosen = math.random(1, string.len(list))
 			screengui.Name = screengui.Name.. string.sub(list, chosen, chosen)
 		end
-		spawn(function()
-			local ScreenGui = Instance.new("ScreenGui")
-			ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		
+		--instance all things place
+		local ScreenGui = Instance.new("ScreenGui")
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-			local Frame = Instance.new("Frame")
-			Frame.Size = UDim2.new(0.4720653, 0, 0.5461347, 0)
-			Frame.Position = UDim2.new(0.2636535, 0, 0.2269327, 0)
-			Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Frame.Parent = ScreenGui
+		local Frame = Instance.new("Frame")
+		Frame.Size = UDim2.new(0.4720653, 0, 0.5461347, 0)
+		Frame.Position = UDim2.new(0.2636535, 0, 0.2269327, 0)
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.Parent = ScreenGui
 
-			local UICorner = Instance.new("UICorner")
-			UICorner.CornerRadius = UDim.new(0.035, 0)
-			UICorner.Parent = Frame
+		local UICorner = Instance.new("UICorner")
+		UICorner.CornerRadius = UDim.new(0.035, 0)
+		UICorner.Parent = Frame
 
-			local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-			UIAspectRatioConstraint.Parent = UICorner
+		local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+		UIAspectRatioConstraint.Parent = UICorner
 
-			local UIGradient = Instance.new("UIGradient")
-			UIGradient.Rotation = 140
-			UIGradient.Color = ColorSequence.new(Color3.fromRGB(47, 47, 47), Color3.fromRGB(38, 38, 38))
-			UIGradient.Parent = Frame
+		local UIGradient = Instance.new("UIGradient")
+		UIGradient.Rotation = 140
+		UIGradient.Color = ColorSequence.new(Color3.fromRGB(47, 47, 47), Color3.fromRGB(38, 38, 38))
+		UIGradient.Parent = Frame
 
-			local TitleHolder = Instance.new("Frame")
-			TitleHolder.Name = "TitleHolder"
-			TitleHolder.Size = UDim2.new(1, 0, 0.0913242, 0)
-			TitleHolder.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
-			TitleHolder.Parent = Frame
+		local TitleHolder = Instance.new("Frame")
+		TitleHolder.Name = "TitleHolder"
+		TitleHolder.Size = UDim2.new(1, 0, 0.0913242, 0)
+		TitleHolder.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+		TitleHolder.Parent = Frame
 
-			local TextLabel = Instance.new("TextLabel")
-			TextLabel.Size = UDim2.new(0.4587766, 0, 0.925, 0)
-			TextLabel.BackgroundTransparency = 1
-			TextLabel.Position = UDim2.new(0.0093085, 0, 0, 0)
-			TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			TextLabel.FontSize = Enum.FontSize.Size14
-			TextLabel.TextStrokeTransparency = 0
-			TextLabel.TextSize = 14
-			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			TextLabel.Text = "LidlLib"
-			TextLabel.TextWrapped = true
-			TextLabel.Font = Enum.Font.Jura
-			TextLabel.TextWrap = true
-			TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-			TextLabel.TextScaled = true
-			TextLabel.Parent = TitleHolder
+		local TextLabel = Instance.new("TextLabel")
+		TextLabel.Size = UDim2.new(0.4587766, 0, 0.925, 0)
+		TextLabel.BackgroundTransparency = 1
+		TextLabel.Position = UDim2.new(0.0093085, 0, 0, 0)
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.FontSize = Enum.FontSize.Size14
+		TextLabel.TextStrokeTransparency = 0
+		TextLabel.TextSize = 14
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.Text = "a aaaaaaaaa a v🧐"
+		TextLabel.TextWrapped = true
+		TextLabel.Font = Enum.Font.Jura
+		TextLabel.TextWrap = true
+		TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+		TextLabel.TextScaled = true
+		TextLabel.Parent = TitleHolder
 
-			local UIGradient1 = Instance.new("UIGradient")
-			UIGradient1.Rotation = 140
-			UIGradient1.Color = ColorSequence.new(Color3.fromRGB(47, 47, 47), Color3.fromRGB(38, 38, 38))
-			UIGradient1.Parent = TitleHolder
+		local UIGradient1 = Instance.new("UIGradient")
+		UIGradient1.Rotation = 140
+		UIGradient1.Color = ColorSequence.new(Color3.fromRGB(47, 47, 47), Color3.fromRGB(38, 38, 38))
+		UIGradient1.Parent = TitleHolder
 
-			local UglyCornerFix = Instance.new("Frame")
-			UglyCornerFix.Name = "UglyCornerFix"
-			UglyCornerFix.Size = UDim2.new(1, 0, 0.15, 0)
-			UglyCornerFix.BorderColor3 = Color3.fromRGB(27, 42, 53)
-			UglyCornerFix.Position = UDim2.new(0, 0, 0.85, 0)
-			UglyCornerFix.BorderSizePixel = 0
-			UglyCornerFix.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
-			UglyCornerFix.Parent = TitleHolder
+		local UglyCornerFix = Instance.new("Frame")
+		UglyCornerFix.Name = "UglyCornerFix"
+		UglyCornerFix.Size = UDim2.new(1, 0, 0.15, 0)
+		UglyCornerFix.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		UglyCornerFix.Position = UDim2.new(0, 0, 0.85, 0)
+		UglyCornerFix.BorderSizePixel = 0
+		UglyCornerFix.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+		UglyCornerFix.Parent = TitleHolder
 
-			local UIGradient2 = Instance.new("UIGradient")
-			UIGradient2.Rotation = 140
-			UIGradient2.Color = ColorSequence.new(Color3.fromRGB(30, 30, 30))
-			UIGradient2.Parent = UglyCornerFix
+		local UIGradient2 = Instance.new("UIGradient")
+		UIGradient2.Rotation = 140
+		UIGradient2.Color = ColorSequence.new(Color3.fromRGB(30, 30, 30))
+		UIGradient2.Parent = UglyCornerFix
 
-			local UICorner1 = Instance.new("UICorner")
-			UICorner1.CornerRadius = UDim.new(0.33, 0)
-			UICorner1.Parent = TitleHolder
+		local UICorner1 = Instance.new("UICorner")
+		UICorner1.CornerRadius = UDim.new(0.33, 0)
+		UICorner1.Parent = TitleHolder
 
-			local UIAspectRatioConstraint1 = Instance.new("UIAspectRatioConstraint")
-			UIAspectRatioConstraint1.Parent = UICorner1
+		local UIAspectRatioConstraint1 = Instance.new("UIAspectRatioConstraint")
+		UIAspectRatioConstraint1.Parent = UICorner1
 
-			local Buttons = Instance.new("Frame")
-			Buttons.Name = "Buttons"
-			Buttons.Size = UDim2.new(0, 134, 0, 398)
-			Buttons.BackgroundTransparency = 1
-			Buttons.Position = UDim2.new(0, 0, 0.0913242, 0)
-			Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Buttons.Parent = Frame
+		local Buttons = Instance.new("Frame")
+		Buttons.Name = "Buttons"
+		Buttons.Size = UDim2.new(0, 134, 0, 398)
+		Buttons.BackgroundTransparency = 1
+		Buttons.Position = UDim2.new(0, 0, 0.0913242, 0)
+		Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Buttons.Parent = Frame
 
-			local UIListLayout = Instance.new("UIListLayout")
-			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			UIListLayout.Parent = Buttons
-
-			title = TextLabel
-			folders = Buttons
-			bg = Frame
-		end)
+		local UIListLayout = Instance.new("UIListLayout")
+		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIListLayout.Parent = Buttons
+		
+		--yea
+		title = TextLabel
+		folders = Buttons
+		bg = Frame		
+		
 		return screengui
 	end
 
@@ -200,7 +202,7 @@ function _G.GetLidlLibrary()
 		end
 	end
 
-	function functions:AddToGui()
+	function functions:Ready()
 		if ui then
 			local s,e = pcall(function()
 				syn.protect_gui(ui)
