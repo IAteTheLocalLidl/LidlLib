@@ -202,7 +202,7 @@ function _G.GetLidlLibrary()
 		end
 	end
 
-	function functions:Ready()
+	function functions:Ready(ui)
 		if ui then
 			local s,e = pcall(function()
 				syn.protect_gui(ui)
